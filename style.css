@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --font-family: "Montserrat", sans-serif;
+
+  --hue: 280;
+  --primary-color: hsl(var(--hue), 100%, 63%);
+  --text-color: #000000;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+
+  background-color: rgb(101, 33, 165);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  max-width: 500px;
+  padding: 2rem;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2.5rem 0;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  height: 3.2rem;
+  border: 1px solid #ccc;
+  border-radius: .4rem 0 0 .4rem;
+
+  padding: 0 .8rem;
+}
+
+.search button {
+  background-color: var(--primary-color);
+  height: 3.2rem;
+  border-radius: 0 .4rem .4rem 0;
+  border: none;
+  padding: 0 1rem;
+
+  cursor: pointer;
+}
+
+.search button:hover {
+  filter: brightness(1.1);
+}
+
+/* Tabela */
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* deixa sem espaçamentos nas bordas do header */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+
+}
+
+/* header tabela */
+table th {
+  background-color: var(--primary-color);
+  text-align: left;
+  font-weight: 600;
+  padding: 1.5rem;
+}
+
+table th:first-child {
+  border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: .4rem;
+}
+
+/* muda o background das linhas inpares */
+table tr:nth-child(even) {
+  background: #eee;
+}
+
+/* muda o background das linhas pares */
+table tr:nth-child(odd) {
+  background: #ddd;
+}
+
+/* conteudo da tabela */
+table td{
+  padding: 1.5rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a{
+  text-decoration: none;
+}
+
+td.user a p{
+  font-weight: bold;
+}
+
+td .remove {
+  background: none;
+  border: none;
+  color: rgb(206, 2, 2);
+}
